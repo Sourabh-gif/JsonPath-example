@@ -1,6 +1,6 @@
 const jp = require('jsonpath');
 
-const cities = {
+const books = {
   store: {
     book: [
       {
@@ -35,6 +35,6 @@ const cities = {
   },
 };
 
-const names = jp.query(cities, '$.store.book[?(@.price>10)].title');
+const names = jp.query(books, '$.store.book[?(@.price>10)].title');
 
 console.log(names);
